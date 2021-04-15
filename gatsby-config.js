@@ -11,6 +11,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-mdx`,
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {},
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "pages",
