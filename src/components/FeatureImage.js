@@ -1,22 +1,24 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FeatureImageWrapper } from "../styles"
 import { graphql, useStaticQuery } from "gatsby"
 
-export const FeatureImage = ({ fluid }) => {
+export const FeatureImage = ({ fixed }) => {
   const data = useStaticQuery(graphql`
     query {
-      imageSharp(fixed: { originalName: { eq: "office.jpg" } }) {
-        fluid {
-          ...GatsbyImageSharpFluid
+      file(relativePath: { eq: "office.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
   `)
+
   return (
     <FeatureImageWrapper>
-      <Img
-        fluid={fluid ? fluid : data.imageSharp.fluid}
+      <GatsbyImage
+        image={fixed ? fixed : data.file.childImageSharp.gatsbyImageData}
+        alt="cover image"
         style={{
           position: "absolute",
           left: 0,

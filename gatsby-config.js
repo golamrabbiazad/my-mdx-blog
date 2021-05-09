@@ -6,10 +6,17 @@
 
 module.exports = {
   /* Your site config here */
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+  },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-mdx`,
+
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
