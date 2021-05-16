@@ -5,11 +5,18 @@
  */
 
 module.exports = {
-  /* Your site config here */
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
+  },
+  siteMetadata: {
+    title: "My MDX Blog",
+    description: "It's an experimental mdx blog using gatsby.js",
+    url: "https://github.com/golamrabbiazad/my-mdx-blog",
+    image: "/office.jpg",
+    twitterUsername: "@golamrabbiazad",
+    author: "Golamrabbi Azad",
   },
   plugins: [
     `gatsby-plugin-image`,

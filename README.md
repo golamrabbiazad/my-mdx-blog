@@ -20,7 +20,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
    ```shell
    # github repo
-   gh repo clone golamrabbiazad/my-goto-mdx-blog
+   gh repo clone golamrabbiazad/my-mdx-blog
    ```
 
 1. **Start developing.**
@@ -28,7 +28,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
    Navigate into your new site’s directory and start it up.
 
    ```shell
-   cd my-goto-mdx-blog/
+   cd my-mdx-blog/
    yarn develop
    ```
 
