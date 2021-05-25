@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
   Array.from({ length: numPages }).forEach((_, idx) => {
     actions.createPage({
       path: idx === 0 ? `/` : `/${idx + 1}`,
-      component: path.resolve("./src/templates/allPosts.js"),
+      component: path.resolve("./src/templates/allPosts.tsx"),
       context: {
         limit: postsPerPage,
         skip: idx * postsPerPage,
@@ -40,7 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     actions.createPage({
       path: slug,
-      component: path.resolve("./src/templates/singlePost.js"),
+      component: path.resolve("./src/templates/singlePost.tsx"),
       context: {
         id,
       },

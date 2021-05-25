@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 export const PaginationWrapper = styled.div`
@@ -11,16 +11,18 @@ export const PaginationWrapper = styled.div`
 
   a:nth-child(1) {
     color: ${props =>
-      props.isFirst ? props.theme.colors.dark3 : props.theme.colors.dark1};
-    pointer-events: ${props => (props.isFirst ? "none" : "auto")};
-    cursor: ${props => (props.isFirst ? "default" : "pointer")};
+      props.theme.isFirst
+        ? props.theme.colors.dark3
+        : props.theme.colors.dark1};
+    pointer-events: ${props => (props.theme.isFirst ? "none" : "auto")};
+    cursor: ${props => (props.theme.isFirst ? "default" : "pointer")};
   }
 
   a:nth-child(2) {
     color: ${props =>
-      props.isLast ? props.theme.colors.dark3 : props.theme.colors.dark1};
-    pointer-events: ${props => (props.isLast ? "none" : "auto")};
-    cursor: ${props => (props.isLast ? "default" : "pointer")};
+      props.theme.isLast ? props.theme.colors.dark3 : props.theme.colors.dark1};
+    pointer-events: ${props => (props.theme.isLast ? "none" : "auto")};
+    cursor: ${props => (props.theme.isLast ? "default" : "pointer")};
   }
 
   @media ${props => props.theme.breakpoints.tablet} {
